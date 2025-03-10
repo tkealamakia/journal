@@ -24,7 +24,7 @@ public class JournalEntryService {
   }
 
   public List<JournalEntry> getAllEntries() {
-    return repository.findAll();
+    return repository.findAllByOrderByCreatedAtDesc();
   }
 
   public Optional<JournalEntry> getEntry(Long id) {
